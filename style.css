@@ -1,0 +1,114 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    font-family: poppins;
+}
+
+body {
+    width: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.app-container {
+    margin: 10px auto;
+    background: #eff;
+    padding: 20px;
+    width: 90%;
+    max-width: 540px;
+    border-radius: 10px;
+}
+
+.title {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.input-container, form{
+    width: 100%;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    background: rgba(9, 9, 121, .1);
+    border-radius: 50px;
+}
+
+input{
+    background: none;
+    padding: 13px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+button{
+    padding: 10px 40px;
+    background:  rgba(9, 9, 121, 1);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+#notes-container {
+    margin-left: 35px;
+    margin-top: 20px;
+}
+
+li{
+    list-style-position: outside;
+    word-break: break-all;
+    line-height: 25px;
+    padding-bottom: 15px;
+    padding-right: 45px;
+    user-select: none;
+    position: relative;
+    list-style: none;
+    /* list-style:url(/circle.svg); */
+}
+
+li::before{
+    content: "";
+    position: absolute;
+    background: url(/circle.svg);
+    width: 25px;
+    height: 25px;
+    left: -30px;
+    cursor: pointer;
+}
+
+li.selected{
+    color: #999;
+    text-decoration: line-through;
+}
+
+li.selected::before{
+    background: url(/check.svg);
+    cursor: pointer;
+}
+
+li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    line-height: 30px;
+    background: #eee;
+    color: #666;
+    width: 30px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+li time{
+    font-weight:lighter;
+    font-size: small;
+    font-style: italic;
+    color: #888;
+}
